@@ -54,7 +54,7 @@ router.get(
           //   request(send_to_api, (error_3, response_3, body_3) => {
           //     response_1.send(response_3.body);
           //   });
-          response_1.send(response_2.body);
+          response_1.send(response_2.body["AUTHORIZATION_TOKEN"]);
         }
       }
     });
