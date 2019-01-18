@@ -1,0 +1,32 @@
+{
+  "name": "ao-product-router-aosf-api",
+  "version": "1.0.0",
+  "description": "Router API for AO Storefront",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/athenasowl/ao-product-router-aosf-api.git"
+  },
+  "author": "Chinmay Mokashi",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.1",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "joi": "^13.4.0",
+    "jsonwebtoken": "^8.3.0",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.3",
+    "randomstring": "^1.1.5",
+    "request": "^2.88.0",
+    "requests": "^0.2.2",
+    "string-template": "^1.0.0"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/athenasowl/ao-product-router-aosf-api/issues"
+  },
+  "homepage": "https://gitlab.com/athenasowl/ao-product-router-aosf-api#README"
+}
