@@ -6,11 +6,12 @@ const Connection = require("./connections/mysql");
 const Resp = require("./constants/response");
 
 const check_mysql_connection = require("./routes/check_mysql_connection");
+const connect_to_db = require("./routes/connect")
 const routes = require("./routes/route");
 
-const port = process.env.port || 3000;
+const port = process.env.port || 2000;
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",
@@ -29,6 +30,7 @@ app.listen(port, () => {
 Connection.connect();
 
 app.use("/api/check_db_connection", check_mysql_connection);
+app.use("/api/connect_to_db", connect_to_db)
 app.use("/api/", routes);
 
 // Test server connection
