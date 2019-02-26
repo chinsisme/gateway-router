@@ -38,8 +38,8 @@ app.use("/api/", routes);
 app.get("/", (req, res) => {
   res
     .send({
-      MESSAGE: Resp.message.SERVER_CONNECTION_SUCCESS,
-      STATUS_CODE: Resp.status_code.SERVER_CONNECTION_SUCCESS
+      MESSAGE: process.env.MESSAGE_SERVER_CONNECTION_SUCCESS,
+      STATUS_CODE: process.env.STATUS_CODE_SERVER_CONNECTION_SUCCESS
     })
-    .status(Resp.status_code.SERVER_CONNECTION_SUCCESS);
+    .status(process.env.STATUS_CODE_SERVER_CONNECTION_SUCCESS);
 });

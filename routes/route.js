@@ -3,7 +3,7 @@ const router = express.Router();
 const compile = require("string-template/compile");
 const request = require("request");
 
-const Resp = require("./../constants/response");
+// const Resp = require("./../constants/response");
 const Routes = require("./../constants/routes");
 
 router.get(

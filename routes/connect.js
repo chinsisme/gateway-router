@@ -3,7 +3,7 @@ const router = express.Router();
 
 const Connection = require("./../connections/mysql");
 
-const Resp = require("./../constants/response");
+// const Resp = require("./../constants/response");
 
 router.use(express.json());
 
@@ -13,17 +13,17 @@ router.get("/", (req, res) => {
         Connection.connect();
         res
             .send({
-                MESSAGE: Resp.message.DB_CONNECTION_ATTEMPTED,
-                STATUS_CODE: Resp.status_code.DB_CONNECTION_ATTEMPTED
+                MESSAGE: process.env.MESSAGE_DB_CONNECTION_ATTEMPTED,
+                STATUS_CODE: process.env.STATUS_CODE_DB_CONNECTION_ATTEMPTED
             })
-            .status(Number(Resp.status_code.DB_CONNECTION_ATTEMPTED));
+            .status(Number(process.env.STATUS_CODE_DB_CONNECTION_ATTEMPTED));
     } else {
         res
             .send({
-                MESSAGE: Resp.message.DB_CONNECTED_ALREADY,
-                STATUS_CODE: Resp.status_code.DB_CONNECTED_ALREADY
+                MESSAGE: process.env.MESSAGE_DB_CONNECTED_ALREADY,
+                STATUS_CODE: process.env.STATUS_CODE_DB_CONNECTED_ALREADY
             })
-            .status(Number(Resp.status_code.DB_CONNECTED_ALREADY));
+            .status(Number(process.env.STATUS_CODE_DB_CONNECTED_ALREADY));
     }
 });
 
